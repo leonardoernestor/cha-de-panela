@@ -3,485 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta
-    name="description"
-    content="Chá de panela de Gislaine e Leonardo. Conheça nossa lista de presentes e faça parte desse momento especial."
-  >
-
+  <meta name="description" content="Chá de panela de Gislaine e Leonardo. Conheça nossa lista de presentes e faça parte desse momento especial.">
   <meta name="theme-color" content="#626b46">
-
   <title>Gislaine & Leonardo | Chá de Panela</title>
-
   <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
-
 <body>
   <header class="topo">
     <nav class="container navegacao" aria-label="Menu principal">
       <a href="#inicio" class="marca">G & L</a>
-
       <div class="menu">
         <a href="#cores">Nossas cores</a>
         <a href="#presentes">Presentes</a>
       </div>
     </nav>
   </header>
-
   <main>
     <section class="hero" id="inicio">
       <div class="container">
         <span class="etiqueta">Nosso chá de panela</span>
-
         <h1>Gislaine <span>&</span> Leonardo</h1>
-
-        <p>
-          Nosso maior presente é a sua presença!
-          Mas, se quiser nos ajudar a completar nosso lar,
-          preparamos esta lista com muito carinho.
-        </p>
-
-        <a href="#presentes" class="botao">
-          Conhecer a lista de presentes
-        </a>
+        <p>Nosso maior presente é a sua presença! Mas, se quiser nos ajudar a completar nosso lar, preparamos esta lista com muito carinho.</p>
+        <a href="#presentes" class="botao">Conhecer a lista de presentes</a>
       </div>
     </section>
-
     <section class="secao" id="cores">
       <div class="container">
         <div class="cabecalho-secao">
           <h2>As cores do nosso lar</h2>
-
-          <p>
-            Gostamos de uma casa acolhedora, com tons naturais.
-            Se puder, escolha presentes em caqui, nude, marrom
-            ou verde-oliva. Inox, branco e detalhes em bambu
-            também combinam com a nossa proposta.
-          </p>
+          <p>Gostamos de uma casa acolhedora, com tons naturais. Se puder, escolha presentes em caqui, nude, marrom ou verde-oliva. Inox, branco e detalhes em bambu também combinam com a nossa proposta.</p>
         </div>
-
         <div class="paleta" aria-label="Paleta de cores preferidas">
-          <div class="cor">
-            <span class="amostra" style="background: var(--caqui)"></span>
-            <span>Caqui</span>
-          </div>
-
-          <div class="cor">
-            <span class="amostra" style="background: var(--nude)"></span>
-            <span>Nude</span>
-          </div>
-
-          <div class="cor">
-            <span class="amostra" style="background: var(--marrom)"></span>
-            <span>Marrom</span>
-          </div>
-
-          <div class="cor">
-            <span class="amostra" style="background: var(--oliva)"></span>
-            <span>Verde-oliva</span>
-          </div>
+          <div class="cor"><span class="amostra" style="background: var(--caqui)"></span><span>Caqui</span></div>
+          <div class="cor"><span class="amostra" style="background: var(--nude)"></span><span>Nude</span></div>
+          <div class="cor"><span class="amostra" style="background: var(--marrom)"></span><span>Marrom</span></div>
+          <div class="cor"><span class="amostra" style="background: var(--oliva)"></span><span>Verde-oliva</span></div>
         </div>
       </div>
     </section>
-
     <section class="secao" id="presentes">
       <div class="container">
         <div class="cabecalho-secao">
           <h2>Nossa lista de presentes</h2>
-
-          <p>
-            Cada detalhe vai nos ajudar a construir um lar
-            cheio de carinho e boas histórias.
-          </p>
+          <p>Cada detalhe vai nos ajudar a construir um lar cheio de carinho e boas histórias. As imagens são ilustrativas; os botões levam diretamente às lojas.</p>
         </div>
-
         <div class="filtros">
           <div>
-            <label class="sr-only" for="busca">
-              Buscar presente
-            </label>
-
-            <input
-              type="search"
-              id="busca"
-              placeholder="Qual presente você está procurando?"
-              autocomplete="off"
-            >
+            <label class="sr-only" for="busca">Buscar presente</label>
+            <input type="search" id="busca" placeholder="Qual presente você está procurando?" autocomplete="off">
           </div>
-
           <div>
-            <label class="sr-only" for="filtroCategoria">
-              Filtrar por categoria
-            </label>
-
-            <select id="filtroCategoria">
-              <option value="">Todas as categorias</option>
-            </select>
+            <label class="sr-only" for="filtroCategoria">Filtrar por categoria</label>
+            <select id="filtroCategoria"><option value="">Todas as categorias</option></select>
           </div>
         </div>
-
         <p class="contador" id="contador" role="status"></p>
-
+        <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
+        <p class="sr-only" id="status" role="status" aria-live="polite"></p>
         <div class="grade" id="listaPresentes"></div>
-
-        <noscript>
-          <p>
-            Ative o JavaScript do navegador para visualizar
-            e pesquisar os presentes.
-          </p>
-        </noscript>
-
-        <div class="aviso">
-          Os links são sugestões de pesquisa nas lojas.
-          Você pode escolher a marca, o modelo e a loja
-          que preferir. Antes de comprar, confira as
-          características do produto e, nos eletroportáteis,
-          confirme a voltagem com a gente.
-        </div>
+        <noscript><p>Ative o JavaScript do navegador para visualizar e pesquisar os presentes.</p></noscript>
       </div>
     </section>
-
     <section class="secao">
       <div class="container">
         <div class="mensagem">
+          <img
+            class="foto-casal"
+            src="public/images/Retrato%20de%20casamento%20no%20altar.png"
+            alt="Gislaine e Leonardo juntos no dia do casamento"
+            loading="lazy"
+          >
           <h2>Uma nova história começa aqui</h2>
-
-          <p>
-            Cada presente fará parte de uma nova história,
-            construída com amor, parceria e muitos momentos felizes.
-          </p>
-
-          <p>
-            Obrigado por fazer parte desse pedacinho da nossa vida.
-            Sua presença e seu carinho são o que mais importa!
-          </p>
-
-          <div class="assinatura">
-            Com carinho, Gislaine & Leonardo
-          </div>
+          <p>Cada presente fará parte de uma nova história, construída com amor, parceria e muitos momentos felizes.</p>
+          <p>Obrigado por fazer parte desse pedacinho da nossa vida. Sua presença e seu carinho são o que mais importa!</p>
+          <div class="assinatura">Com carinho, Gislaine & Leonardo</div>
         </div>
       </div>
     </section>
   </main>
-
-  <footer>
-    Feito com carinho para o nosso chá de panela · G & L
-  </footer>
-
-  <script>
-    /*
-      Para usar links de anúncios específicos, acrescente
-      ao presente a propriedade "links", por exemplo:
-
-      {
-        nome: "Liquidificador",
-        links: {
-          mercadoLivre: "COLE_AQUI_O_LINK_DO_PRODUTO",
-          shopee: "COLE_AQUI_O_LINK_DO_PRODUTO",
-          amazon: "COLE_AQUI_O_LINK_DO_PRODUTO"
-        }
-      }
-
-      Sem links personalizados, o site abre uma pesquisa.
-    */
-
-    const categorias = [
-      {
-        nome: "Utensílios de cozinha",
-        icone: "🥄",
-        itens: [
-          "Conjunto de utensílios em inox e silicone",
-          "Concha, escumadeira e pegador",
-          "Fouet e pincel culinário",
-          "Tábua de corte de bambu",
-          "Ralador e espremedor de alho",
-          "Abridor de latas e saca-rolhas",
-          "Tesoura de cozinha"
-        ]
-      },
-      {
-        nome: "Panos e têxteis",
-        icone: "🧵",
-        itens: [
-          "Jogo de panos de prato",
-          "Aventais para casal",
-          "Luvas térmicas e pegadores",
-          "Toalha de mesa bege ou branca",
-          "Caminho de mesa em linho",
-          "Jogo americano neutro",
-          "Guardanapos de tecido"
-        ]
-      },
-      {
-        nome: "Louças e mesa posta",
-        icone: "🍽️",
-        itens: [
-          "Aparelho de jantar",
-          "Jogo de xícaras e pires",
-          "Conjunto de bowls",
-          "Travessas de servir",
-          "Saladeiras de cerâmica",
-          "Jogo de copos de vidro",
-          "Taças para vinho e água",
-          "Pratos para sobremesa",
-          "Petisqueiras e ramequins"
-        ]
-      },
-      {
-        nome: "Organização",
-        icone: "🫙",
-        itens: [
-          "Potes herméticos para mantimentos",
-          "Porta-temperos",
-          "Porta-talheres para gaveta",
-          "Organizador de pia",
-          "Escorredor de louças",
-          "Cestos organizadores",
-          "Porta-guardanapos",
-          "Suporte para papel-toalha",
-          "Potes para café, açúcar e sal"
-        ]
-      },
-      {
-        nome: "Eletroportáteis",
-        icone: "🔌",
-        itens: [
-          "Liquidificador",
-          "Cafeteira elétrica",
-          "Air fryer",
-          "Batedeira",
-          "Sanduicheira",
-          "Chaleira elétrica",
-          "Mixer de mão",
-          "Torradeira",
-          "Processador de alimentos"
-        ]
-      },
-      {
-        nome: "Têxteis para a casa",
-        icone: "🛏️",
-        itens: [
-          "Jogo de toalhas de banho",
-          "Toalhas de rosto",
-          "Jogo de cama",
-          "Manta para sofá",
-          "Capas de almofadas",
-          "Tapete para banheiro",
-          "Cortina para cozinha"
-        ]
-      },
-      {
-        nome: "Decoração e detalhes",
-        icone: "🌿",
-        itens: [
-          "Vasos decorativos",
-          "Difusores de ambiente",
-          "Velas aromáticas",
-          "Bandeja decorativa",
-          "Fruteira de bancada",
-          "Centro de mesa",
-          "Porta-retratos",
-          "Jarra de vidro"
-        ]
-      },
-      {
-        nome: "Panelas e cozinha",
-        icone: "🍳",
-        itens: [
-          "Jogo de panelas",
-          "Frigideira",
-          "Panela de pressão",
-          "Conjunto de facas",
-          "Jogo de assadeiras",
-          "Panela para cozinhar a vapor",
-          "Faqueiro completo",
-          "Aparelho de jantar especial"
-        ]
-      },
-      {
-        nome: "Para momentos gostosos",
-        icone: "☕",
-        itens: [
-          "Boleira com tampa",
-          "Suporte para bolo",
-          "Garrafa térmica",
-          "Jarra para suco",
-          "Kit para café",
-          "Tábua para queijos e frios",
-          "Conjunto para fondue",
-          "Petisqueiras para receber amigos"
-        ]
-      }
-    ];
-
-    const presentes = categorias.flatMap(categoria =>
-      categoria.itens.map(item => ({
-        ...(typeof item === "string" ? { nome: item } : item),
-        categoria: categoria.nome,
-        icone: categoria.icone
-      }))
-    );
-
-    const campoBusca = document.getElementById("busca");
-    const filtroCategoria = document.getElementById("filtroCategoria");
-    const lista = document.getElementById("listaPresentes");
-    const contador = document.getElementById("contador");
-
-    function normalizar(texto) {
-      return texto
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase()
-        .trim();
-    }
-
-    function gerarLinks(nome) {
-      const consulta = encodeURIComponent(nome);
-      const slug = encodeURIComponent(
-        nome.trim().replace(/\s+/g, "-")
-      );
-
-      return {
-        mercadoLivre: `https://lista.mercadolivre.com.br/${slug}`,
-        shopee: `https://shopee.com.br/search?keyword=${consulta}`,
-        amazon: `https://www.amazon.com.br/s?k=${consulta}`
-      };
-    }
-
-    function linkSeguro(url) {
-      try {
-        const endereco = new URL(url);
-        return endereco.protocol === "https:" ? endereco.href : null;
-      } catch {
-        return null;
-      }
-    }
-
-    function criarLink(rotulo, url, principal, nomePresente) {
-      const endereco = linkSeguro(url);
-
-      if (!endereco) return null;
-
-      const link = document.createElement("a");
-      link.className = principal
-        ? "loja loja-principal"
-        : "loja";
-
-      link.href = endereco;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.textContent = rotulo;
-
-      link.setAttribute(
-        "aria-label",
-        `${rotulo}: ${nomePresente}, abre em nova aba`
-      );
-
-      return link;
-    }
-
-    function criarCard(presente) {
-      const card = document.createElement("article");
-      card.className = "presente";
-
-      const icone = document.createElement("div");
-      icone.className = "icone";
-      icone.setAttribute("aria-hidden", "true");
-      icone.textContent = presente.icone;
-
-      const categoria = document.createElement("div");
-      categoria.className = "categoria";
-      categoria.textContent = presente.categoria;
-
-      const titulo = document.createElement("h3");
-      titulo.textContent = presente.nome;
-
-      const descricao = document.createElement("p");
-      descricao.className = "descricao";
-      descricao.textContent =
-        "Um carinho para completar nosso novo lar.";
-
-      const lojas = document.createElement("div");
-      lojas.className = "lojas";
-
-      const links = {
-        ...gerarLinks(presente.nome),
-        ...presente.links
-      };
-
-      const opcoes = [
-        ["Ver no Mercado Livre", links.mercadoLivre, true],
-        ["Ver na Shopee", links.shopee, false],
-        ["Ver na Amazon", links.amazon, false]
-      ];
-
-      opcoes.forEach(([rotulo, url, principal]) => {
-        const link = criarLink(
-          rotulo,
-          url,
-          principal,
-          presente.nome
-        );
-
-        if (link) lojas.appendChild(link);
-      });
-
-      card.append(icone, categoria, titulo, descricao, lojas);
-
-      return card;
-    }
-
-    function renderizarPresentes() {
-      const termo = normalizar(campoBusca.value);
-      const categoriaSelecionada = filtroCategoria.value;
-
-      const resultados = presentes.filter(presente => {
-        const correspondeBusca = normalizar(
-          `${presente.nome} ${presente.categoria}`
-        ).includes(termo);
-
-        const correspondeCategoria =
-          !categoriaSelecionada ||
-          presente.categoria === categoriaSelecionada;
-
-        return correspondeBusca && correspondeCategoria;
-      });
-
-      lista.replaceChildren();
-
-      contador.textContent =
-        `${resultados.length} de ${presentes.length} presentes`;
-
-      if (resultados.length === 0) {
-        const mensagem = document.createElement("p");
-        mensagem.className = "vazio";
-        mensagem.textContent =
-          "Nenhum presente encontrado. Tente outro nome ou categoria.";
-
-        lista.appendChild(mensagem);
-        return;
-      }
-
-      const fragmento = document.createDocumentFragment();
-
-      resultados.forEach(presente => {
-        fragmento.appendChild(criarCard(presente));
-      });
-
-      lista.appendChild(fragmento);
-    }
-
-    categorias.forEach(categoria => {
-      const opcao = document.createElement("option");
-      opcao.value = categoria.nome;
-      opcao.textContent = categoria.nome;
-      filtroCategoria.appendChild(opcao);
-    });
-
-    campoBusca.addEventListener("input", renderizarPresentes);
-    filtroCategoria.addEventListener("change", renderizarPresentes);
-
-    renderizarPresentes();
-  </script>
+  <footer>Feito com carinho para o nosso chá de panela · G & L</footer>
 </body>
 </html>

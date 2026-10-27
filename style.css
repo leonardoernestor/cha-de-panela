@@ -252,7 +252,8 @@ input::placeholder {
 .presente {
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  overflow: hidden;
+  padding: 0;
   border: 1px solid var(--borda);
   border-radius: 22px;
   background: var(--branco);
@@ -263,6 +264,21 @@ input::placeholder {
 .presente:hover {
   transform: translateY(-4px);
   border-color: var(--caqui);
+}
+
+.foto-presente {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  background: var(--fundo);
+}
+
+.presente-conteudo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
 }
 
 .icone {
@@ -307,9 +323,13 @@ input::placeholder {
   padding: 10px 12px;
   border: 1px solid var(--borda);
   border-radius: 10px;
+  background: var(--branco);
+  color: var(--texto);
   text-align: center;
   text-decoration: none;
   font-size: .85rem;
+  font-family: inherit;
+  cursor: pointer;
   transition: background .2s, border-color .2s;
 }
 
@@ -318,15 +338,40 @@ input::placeholder {
   background: var(--fundo);
 }
 
-.loja-principal {
+.loja-selecionada {
   background: var(--oliva);
   border-color: var(--oliva);
   color: var(--branco);
 }
 
-.loja-principal:hover {
+.loja-selecionada:hover {
   background: #4e5736;
   border-color: #4e5736;
+}
+
+.loja:disabled {
+  cursor: wait;
+  opacity: .65;
+}
+
+.presente-indisponivel {
+  display: block;
+  padding: 10px 12px;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  text-align: center;
+  color: var(--suave);
+  font-size: .85rem;
+}
+
+.confirmar-compra {
+  border-style: dashed;
+}
+
+.aviso-erro {
+  border: 1px solid #b43e32;
+  background: #fff0ed;
+  color: #842d25;
 }
 
 .aviso {
@@ -344,6 +389,18 @@ input::placeholder {
   border-radius: 28px;
   background: linear-gradient(135deg, #eee4d8, #f6f2ea);
   text-align: center;
+}
+
+.foto-casal {
+  display: block;
+  width: min(100%, 390px);
+  max-height: 540px;
+  margin: 0 auto 30px;
+  border: 6px solid var(--branco);
+  border-radius: 22px;
+  box-shadow: var(--sombra);
+  object-fit: cover;
+  object-position: center 35%;
 }
 
 .mensagem p {
@@ -425,7 +482,11 @@ footer {
   }
 
   .presente {
-    padding: 22px;
+    padding: 0;
+  }
+
+  .presente-conteudo {
+    padding: 20px;
   }
 
   .paleta {
