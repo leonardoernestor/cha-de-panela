@@ -169,6 +169,24 @@ h1 span {
   transform: translateY(-2px);
 }
 
+.botoes-hero {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.botao-secundario {
+  border-color: var(--oliva);
+  background: transparent;
+  color: var(--oliva);
+}
+
+.botao-secundario:hover {
+  background: var(--oliva);
+  color: var(--branco);
+}
+
 .secao {
   padding: 64px 0;
   scroll-margin-top: 24px;
@@ -461,11 +479,11 @@ footer {
   }
 
   .menu {
-    gap: 14px;
+    gap: 10px;
   }
 
   .menu a {
-    font-size: .8rem;
+    font-size: .72rem;
   }
 
   .hero {
