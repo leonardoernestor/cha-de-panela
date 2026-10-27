@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = '';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwuWOAJBQeUokYCXyYhb1Jr8nyphLoiUe2OROdYZINocto_EAr9HG9pXOldB_RhCeE/exec';
 const PRODUCTS_URL = 'products.json';
 const REFRESH_INTERVAL = 30000;
 const MARKETPLACES = {
@@ -19,6 +19,7 @@ let products = [];
 let claims = new Map();
 let selectedMarkets = new Map();
 let claimsLoaded = false;
+let claimsError = false;
 let refreshTimer;
 
 try {
@@ -124,8 +125,6 @@ function createCard(product) {
   purchased.className = 'presente-indisponivel';
   purchased.textContent = 'Já comprado';
   stores.append(purchased);
- } else if (APPS_SCRIPT_URL && !claimsLoaded) {
-  description.textContent = 'Verificando se este presente já foi comprado…';
  } else {
   description.textContent = 'Um carinho para completar nosso novo lar.';
   const mercadoLivre = createStoreLink(product, 'mercadoLivre');
@@ -152,9 +151,11 @@ function render() {
  const purchased = matching.filter(product => claims.has(product.id)).length;
  $('contador').textContent = claimsLoaded
   ? `${matching.length - purchased} disponíveis · ${purchased} já comprados · ${matching.length} presentes`
-  : APPS_SCRIPT_URL
-   ? `Verificando ${matching.length} presentes…`
-   : `${matching.length} presentes`;
+  : claimsError
+   ? `${matching.length} presentes · status de compra indisponível`
+   : APPS_SCRIPT_URL
+    ? `Verificando ${matching.length} presentes…`
+    : `${matching.length} presentes`;
 
  const list = $('listaPresentes');
  list.replaceChildren();
@@ -184,7 +185,7 @@ function refreshClaims() {
     return;
    }
    if (response.error) {
-    reject(new Error(response.error));
+    reject(new Error('A confirmação compartilhada está indisponível. Verifique o ID da planilha e a implantação do Apps Script.'));
     return;
    }
    if (!Array.isArray(response.claims)) {
@@ -193,6 +194,7 @@ function refreshClaims() {
    }
    claims = new Map(response.claims.map(claim => [claim.id, claim]));
    claimsLoaded = true;
+   claimsError = false;
    render();
    resolve();
   }
@@ -236,12 +238,22 @@ async function initialize() {
   await refreshClaims();
   setNotice('Depois de concluir a compra na loja, use “Já comprei este presente” para atualizar a lista para todos.');
   refreshTimer = setInterval(() => {
-   refreshClaims().catch(error => setNotice(error.message, true));
+   refreshClaims().catch(error => {
+    claimsError = true;
+    render();
+    setNotice(error.message, true);
+   });
   }, REFRESH_INTERVAL);
   document.addEventListener('visibilitychange', () => {
-   if (!document.hidden) refreshClaims().catch(error => setNotice(error.message, true));
+   if (!document.hidden) refreshClaims().catch(error => {
+    claimsError = true;
+    render();
+    setNotice(error.message, true);
+   });
   });
  } catch (error) {
+  claimsError = true;
+  render();
   setNotice(error.message, true);
  }
 }
@@ -249,7 +261,11 @@ async function initialize() {
 $('busca').addEventListener('input', render);
 $('filtroCategoria').addEventListener('change', render);
 window.addEventListener('focus', () => {
- if (claimsLoaded) refreshClaims().catch(error => setNotice(error.message, true));
+ if (APPS_SCRIPT_URL) refreshClaims().catch(error => {
+  claimsError = true;
+  render();
+  setNotice(error.message, true);
+ });
 });
 window.addEventListener('beforeunload', () => clearInterval(refreshTimer));
 initialize();
