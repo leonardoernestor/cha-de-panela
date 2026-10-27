@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwuWOAJBQeUokYCXyYhb1Jr8nyphLoiUe2OROdYZINocto_EAr9HG9pXOldB_RhCeE/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzuOXooHZAtRpUFZphBTxTa-RDL2Wh1wepj1fcVQx_TBeMu9hK9b-lSZDOCLuP9sK0/exec';
 const PRODUCTS_URL = 'products.json';
 const REFRESH_INTERVAL = 30000;
 const MARKETPLACES = {
