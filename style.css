@@ -451,6 +451,14 @@ footer {
   border-top: 1px solid var(--borda);
 }
 
+footer p {
+  margin-bottom: 16px;
+}
+
+.botao-voltar-inicio {
+  font-size: .9rem;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
