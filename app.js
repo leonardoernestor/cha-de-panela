@@ -112,7 +112,7 @@ function createCard(product) {
  const category = document.createElement('div');
  category.className = 'categoria';
  category.textContent = product.category;
- const title = document.createElement('h3');
+ const title = document.createElement('h4');
  title.textContent = product.name;
  const description = document.createElement('p');
  description.className = 'descricao';
