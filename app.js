@@ -1,5 +1,6 @@
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzuOXooHZAtRpUFZphBTxTa-RDL2Wh1wepj1fcVQx_TBeMu9hK9b-lSZDOCLuP9sK0/exec';
-const PRODUCTS_URL = 'products.json';
+const APP_BASE_URL = new URL('.', document.currentScript.src);
+const PRODUCTS_URL = new URL('products.json', APP_BASE_URL);
 const REFRESH_INTERVAL = 30000;
 const MARKETPLACES = {
  mercadoLivre: {
@@ -49,7 +50,7 @@ function safeMarketplaceUrl(product, marketplace) {
 
 function imageUrl(product) {
  if (/^https:\/\//i.test(product.image || '')) return product.image;
- return `public/${String(product.image || '').replace(/^\/+/, '')}`;
+ return new URL(`public/${String(product.image || '').replace(/^\/+/, '')}`, APP_BASE_URL).href;
 }
 
 function createStoreLink(product, marketplace) {
@@ -103,7 +104,7 @@ function createCard(product) {
  image.loading = 'lazy';
  image.onerror = () => {
   image.onerror = null;
-  image.src = 'public/images/categoria-1.svg';
+  image.src = new URL('public/images/categoria-1.svg', APP_BASE_URL).href;
  };
 
  const content = document.createElement('div');
