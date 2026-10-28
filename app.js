@@ -4,8 +4,8 @@ const REFRESH_INTERVAL = 30000;
 const MARKETPLACES = {
  mercadoLivre: {
   label: 'Ver no Mercado Livre',
-  domains: ['mercadolivre.com.br'],
-  search: product => `https://lista.mercadolivre.com.br/${encodeURIComponent(product.name.trim().replace(/\s+/g, '-'))}`
+  domains: ['mercadolivre.com.br', 'meli.la'],
+  search: () => 'https://meli.la/12x2Meo'
  },
  shopee: {
   label: 'Ver na Shopee',
@@ -185,7 +185,7 @@ function refreshClaims() {
     return;
    }
    if (response.error) {
-    reject(new Error('A confirmação compartilhada está indisponível. Verifique o ID da planilha e a implantação do Apps Script.'));
+    reject(new Error('A planilha retornou uma lista de confirmações inválida.'));
     return;
    }
    if (!Array.isArray(response.claims)) {
