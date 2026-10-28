@@ -267,6 +267,26 @@ input::placeholder {
   gap: 20px;
 }
 
+.grupo-categoria {
+  grid-column: 1 / -1;
+}
+
+.titulo-categoria {
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--borda);
+  color: var(--marrom);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  font-weight: 400;
+}
+
+.grade-categoria {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
 .presente {
   display: flex;
   flex-direction: column;
@@ -472,7 +492,7 @@ footer p {
 }
 
 @media (max-width: 900px) {
-  .grade {
+  .grade-categoria {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -503,7 +523,7 @@ footer p {
   }
 
   .filtros,
-  .grade {
+  .grade-categoria {
     grid-template-columns: 1fr;
   }
 

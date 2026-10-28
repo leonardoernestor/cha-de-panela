@@ -167,8 +167,26 @@ function render() {
   list.append(empty);
   return;
  }
+
+ const categories = new Map();
+ matching.forEach(product => {
+  if (!categories.has(product.category)) categories.set(product.category, []);
+  categories.get(product.category).push(product);
+ });
+
  const fragment = document.createDocumentFragment();
- matching.forEach(product => fragment.append(createCard(product)));
+ categories.forEach((categoryProducts, name) => {
+  const section = document.createElement('section');
+  section.className = 'grupo-categoria';
+  const heading = document.createElement('h3');
+  heading.className = 'titulo-categoria';
+  heading.textContent = name;
+  const categoryGrid = document.createElement('div');
+  categoryGrid.className = 'grade-categoria';
+  categoryProducts.forEach(product => categoryGrid.append(createCard(product)));
+  section.append(heading, categoryGrid);
+  fragment.append(section);
+ });
  list.append(fragment);
 }
 
