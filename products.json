@@ -4,7 +4,10 @@
     "name": "Conjunto de utensílios em inox e silicone",
     "category": "Utensílios de cozinha",
     "priceCents": 12000,
-    "image": "/images/categoria-1.svg"
+    "image": "/images/categoria-1.svg",
+    "links": {
+      "mercadoLivre": "https://meli.la/2pCrgAx"
+    }
   },
   {
     "id": "p02",
