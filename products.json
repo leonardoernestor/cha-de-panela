@@ -14,7 +14,10 @@
     "name": "Concha, escumadeira e pegador",
     "category": "Utensílios de cozinha",
     "priceCents": 5500,
-    "image": "/images/categoria-1.svg"
+    "image": "/images/categoria-1.svg",
+    "links": {
+      "mercadoLivre": "https://meli.la/2C4417z"
+    }
   },
   {
     "id": "p03",
