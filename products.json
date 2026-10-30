@@ -6,7 +6,7 @@
     "priceCents": 12000,
     "image": "/images/categoria-1.svg",
     "links": {
-      "mercadoLivre": "https://meli.la/2pCrgAx"
+      "mercadoLivre": "https://meli.la/2NyRe47"
     }
   },
   {
@@ -24,175 +24,250 @@
     "name": "Fouet e pincel culinário",
     "category": "Utensílios de cozinha",
     "priceCents": 3500,
-    "image": "/images/categoria-1.svg"
+    "image": "/images/categoria-1.svg",
+    "links": {
+      "mercadoLivre": "https://meli.la/2Y4Wyo9"
+    }
   },
   {
     "id": "p04",
     "name": "Tábua de corte de bambu",
     "category": "Utensílios de cozinha",
     "priceCents": 6500,
-    "image": "/images/categoria-1.svg"
+    "image": "/images/categoria-1.svg",
+    "links": {
+      "mercadoLivre": "https://meli.la/24i66my"
+    }
   },
   {
     "id": "p05",
     "name": "Ralador e espremedor de alho",
     "category": "Utensílios de cozinha",
     "priceCents": 4500,
-    "image": "/images/categoria-1.svg"
+    "image": "/images/categoria-1.svg",
+       "links": {
+      "mercadoLivre": "https://meli.la/1shipAe"
+    }
   },
   {
     "id": "p06",
     "name": "Abridor de latas e saca-rolhas",
     "category": "Utensílios de cozinha",
     "priceCents": 4000,
-    "image": "/images/categoria-1.svg"
+    "image": "/images/categoria-1.svg",
+    "links": {
+      "mercadoLivre": "https://meli.la/2MqiAbN"
+    }
   },
   {
     "id": "p07",
     "name": "Tesoura de cozinha",
     "category": "Utensílios de cozinha",
     "priceCents": 3000,
-    "image": "/images/categoria-1.svg"
+    "image": "/images/categoria-1.svg",
+    "links": {
+      "mercadoLivre": "https://meli.la/14wHtAJ"
+    }
   },
   {
     "id": "p08",
     "name": "Jogo de panos de prato",
     "category": "Panos e têxteis",
     "priceCents": 5000,
-    "image": "/images/categoria-2.svg"
+    "image": "/images/categoria-2.svg",
+    "links": {
+      "mercadoLivre": "https://meli.la/16ansW4"
+    }
   },
   {
     "id": "p09",
     "name": "Aventais para casal",
     "category": "Panos e têxteis",
     "priceCents": 9000,
-    "image": "/images/categoria-2.svg"
+    "image": "/images/categoria-2.svg",
+    "links": {
+      "mercadoLivre": "https://meli.la/13mQ6he"
+    }
   },
   {
     "id": "p10",
     "name": "Luvas térmicas e pegadores",
     "category": "Panos e têxteis",
     "priceCents": 4500,
-    "image": "/images/categoria-2.svg"
+    "image": "/images/categoria-2.svg",
+    "links": {
+      "mercadoLivre": "https://meli.la/2iXut5D"
+    }
   },
   {
     "id": "p11",
     "name": "Toalha de mesa bege ou branca",
     "category": "Panos e têxteis",
     "priceCents": 10000,
-    "image": "/images/categoria-2.svg"
+    "image": "/images/categoria-2.svg",
+    "links": {
+      "mercadoLivre": "https://meli.la/2fqeiWa"
+    }
   },
   {
     "id": "p12",
     "name": "Caminho de mesa em linho",
     "category": "Panos e têxteis",
     "priceCents": 8000,
-    "image": "/images/categoria-2.svg"
+    "image": "/images/categoria-2.svg",
+    "links": {
+      "mercadoLivre": "https://meli.la/2JmAKik"
+    }
   },
   {
     "id": "p13",
     "name": "Jogo americano neutro",
     "category": "Panos e têxteis",
     "priceCents": 9000,
-    "image": "/images/categoria-2.svg"
+    "image": "/images/categoria-2.svg",
+    "links": {
+      "mercadoLivre": "https://meli.la/2JmAKik"
+    }
   },
   {
     "id": "p14",
     "name": "Guardanapos de tecido",
     "category": "Panos e têxteis",
     "priceCents": 6000,
-    "image": "/images/categoria-2.svg"
+    "image": "/images/categoria-2.svg",
+    "links": {
+      "mercadoLivre": "https://meli.la/1ua7h93"
+    }
   },
   {
     "id": "p15",
     "name": "Aparelho de jantar",
     "category": "Louças e mesa posta",
     "priceCents": 35000,
-    "image": "/images/categoria-3.svg"
+    "image": "/images/categoria-3.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1dc6QP4"
+    }
   },
   {
     "id": "p16",
     "name": "Jogo de xícaras e pires",
     "category": "Louças e mesa posta",
     "priceCents": 12000,
-    "image": "/images/categoria-3.svg"
+    "image": "/images/categoria-3.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1WwpX8q"
+    }
   },
   {
     "id": "p17",
     "name": "Conjunto de bowls",
     "category": "Louças e mesa posta",
     "priceCents": 9000,
-    "image": "/images/categoria-3.svg"
+    "image": "/images/categoria-3.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1wBCnju"
+    }
   },
   {
     "id": "p18",
     "name": "Travessas de servir",
     "category": "Louças e mesa posta",
     "priceCents": 12000,
-    "image": "/images/categoria-3.svg"
+    "image": "/images/categoria-3.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/15B2L1X"
+    }
   },
   {
     "id": "p19",
     "name": "Saladeiras de cerâmica",
     "category": "Louças e mesa posta",
     "priceCents": 10000,
-    "image": "/images/categoria-3.svg"
+    "image": "/images/categoria-3.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2E1SEbk"
+    }
   },
   {
     "id": "p20",
     "name": "Jogo de copos de vidro",
     "category": "Louças e mesa posta",
     "priceCents": 7000,
-    "image": "/images/categoria-3.svg"
+    "image": "/images/categoria-3.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1ZALG35"
+    }
   },
   {
     "id": "p21",
     "name": "Taças para vinho e água",
     "category": "Louças e mesa posta",
     "priceCents": 15000,
-    "image": "/images/categoria-3.svg"
+    "image": "/images/categoria-3.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1w6js2p"
+    }
   },
   {
     "id": "p22",
     "name": "Pratos para sobremesa",
     "category": "Louças e mesa posta",
     "priceCents": 9000,
-    "image": "/images/categoria-3.svg"
+    "image": "/images/categoria-3.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1pF2oZ8"
+    }
   },
   {
     "id": "p23",
     "name": "Petisqueiras e ramequins",
     "category": "Louças e mesa posta",
     "priceCents": 8000,
-    "image": "/images/categoria-3.svg"
+    "image": "/images/categoria-3.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1FWKc7Z"
+    }
   },
   {
     "id": "p24",
     "name": "Potes herméticos para mantimentos",
     "category": "Organização",
     "priceCents": 12000,
-    "image": "/images/categoria-4.svg"
+    "image": "/images/categoria-4.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2oc8xQ6"
+    }
   },
   {
     "id": "p25",
     "name": "Porta-temperos",
     "category": "Organização",
     "priceCents": 8000,
-    "image": "/images/categoria-4.svg"
+    "image": "/images/categoria-4.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1geocif"
+    }
   },
   {
     "id": "p26",
     "name": "Porta-talheres para gaveta",
     "category": "Organização",
     "priceCents": 4500,
-    "image": "/images/categoria-4.svg"
+    "image": "/images/categoria-4.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2deCk9d"
+    }
   },
   {
     "id": "p27",
     "name": "Organizador de pia",
     "category": "Organização",
     "priceCents": 5000,
-    "image": "/images/categoria-4.svg"
+    "image": "/images/categoria-4.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1nfjsct"
+    }
   },
   {
     "id": "p28",
@@ -206,35 +281,50 @@
     "name": "Cestos organizadores",
     "category": "Organização",
     "priceCents": 9000,
-    "image": "/images/categoria-4.svg"
+    "image": "/images/categoria-4.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/24HsS9it"
+    }
   },
   {
     "id": "p30",
     "name": "Porta-guardanapos",
     "category": "Organização",
     "priceCents": 3500,
-    "image": "/images/categoria-4.svg"
+    "image": "/images/categoria-4.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/275Rgmp"
+    }
   },
   {
     "id": "p31",
     "name": "Suporte para papel-toalha",
     "category": "Organização",
     "priceCents": 4000,
-    "image": "/images/categoria-4.svg"
+    "image": "/images/categoria-4.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2RAxYiG"
+    }
   },
   {
     "id": "p32",
     "name": "Potes para café, açúcar e sal",
     "category": "Organização",
     "priceCents": 10000,
-    "image": "/images/categoria-4.svg"
+    "image": "/images/categoria-4.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1yJj29J"
+    }
   },
   {
     "id": "p33",
     "name": "Liquidificador",
     "category": "Eletroportáteis",
     "priceCents": 18000,
-    "image": "/images/categoria-5.svg"
+    "image": "/images/categoria-5.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1rYS7ND"
+    }
   },
   {
     "id": "p34",
@@ -248,265 +338,379 @@
     "name": "Air fryer",
     "category": "Eletroportáteis",
     "priceCents": 45000,
-    "image": "/images/categoria-5.svg"
+    "image": "/images/categoria-5.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/32BiBJx"
+    }
   },
   {
     "id": "p36",
     "name": "Batedeira",
     "category": "Eletroportáteis",
     "priceCents": 22000,
-    "image": "/images/categoria-5.svg"
+    "image": "/images/categoria-5.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/31N5cWt"
+    }
   },
   {
     "id": "p37",
     "name": "Sanduicheira",
     "category": "Eletroportáteis",
     "priceCents": 12000,
-    "image": "/images/categoria-5.svg"
+    "image": "/images/categoria-5.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2FKS5Rjt"
+    }
   },
   {
     "id": "p38",
     "name": "Chaleira elétrica",
     "category": "Eletroportáteis",
     "priceCents": 15000,
-    "image": "/images/categoria-5.svg"
+    "image": "/images/categoria-5.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1Aaro1p"
+    }
   },
   {
     "id": "p39",
     "name": "Mixer de mão",
     "category": "Eletroportáteis",
     "priceCents": 16000,
-    "image": "/images/categoria-5.svg"
+    "image": "/images/categoria-5.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/13Q3yzx"
+    }
   },
   {
     "id": "p40",
     "name": "Torradeira",
     "category": "Eletroportáteis",
     "priceCents": 18000,
-    "image": "/images/categoria-5.svg"
+    "image": "/images/categoria-5.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/13dVz43"
+    }
   },
   {
     "id": "p41",
     "name": "Processador de alimentos",
     "category": "Eletroportáteis",
     "priceCents": 25000,
-    "image": "/images/categoria-5.svg"
+    "image": "/images/categoria-5.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2ZzBMV6"
+    }
   },
   {
     "id": "p42",
     "name": "Jogo de toalhas de banho",
     "category": "Têxteis para a casa",
     "priceCents": 18000,
-    "image": "/images/categoria-6.svg"
+    "image": "/images/categoria-6.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1yQbUfr"
+    }
   },
   {
     "id": "p43",
     "name": "Toalhas de rosto",
     "category": "Têxteis para a casa",
     "priceCents": 6000,
-    "image": "/images/categoria-6.svg"
+    "image": "/images/categoria-6.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2xtJyzM"
+    }
   },
   {
     "id": "p44",
     "name": "Jogo de cama",
     "category": "Têxteis para a casa",
     "priceCents": 20000,
-    "image": "/images/categoria-6.svg"
+    "image": "/images/categoria-6.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2Q6QwXL"
+    }
   },
   {
     "id": "p45",
     "name": "Manta para sofá",
     "category": "Têxteis para a casa",
     "priceCents": 12000,
-    "image": "/images/categoria-6.svg"
+    "image": "/images/categoria-6.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1CQgrJk"
+    }
   },
   {
     "id": "p46",
     "name": "Capas de almofadas",
     "category": "Têxteis para a casa",
     "priceCents": 8000,
-    "image": "/images/categoria-6.svg"
+    "image": "/images/categoria-6.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1WjrmqP"
+    }
   },
   {
     "id": "p47",
     "name": "Tapete para banheiro",
     "category": "Têxteis para a casa",
     "priceCents": 5000,
-    "image": "/images/categoria-6.svg"
+    "image": "/images/categoria-6.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/292ijc6"
+    }
   },
   {
     "id": "p48",
     "name": "Cortina para cozinha",
     "category": "Têxteis para a casa",
     "priceCents": 10000,
-    "image": "/images/categoria-6.svg"
+    "image": "/images/categoria-6.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2jKJkzH"
+    }
   },
   {
     "id": "p49",
     "name": "Vasos decorativos",
     "category": "Decoração e detalhes",
     "priceCents": 8000,
-    "image": "/images/categoria-7.svg"
+    "image": "/images/categoria-7.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2hEdadJ"
+    }
   },
   {
     "id": "p50",
     "name": "Difusores de ambiente",
     "category": "Decoração e detalhes",
     "priceCents": 6000,
-    "image": "/images/categoria-7.svg"
+    "image": "/images/categoria-7.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1XNNBqP"
+    }
   },
   {
     "id": "p51",
     "name": "Velas aromáticas",
     "category": "Decoração e detalhes",
     "priceCents": 5000,
-    "image": "/images/categoria-7.svg"
+    "image": "/images/categoria-7.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1NqAdn9"
+    }
   },
   {
     "id": "p52",
     "name": "Bandeja decorativa",
     "category": "Decoração e detalhes",
     "priceCents": 9000,
-    "image": "/images/categoria-7.svg"
+    "image": "/images/categoria-7.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1jvedRB"
+    }
   },
   {
     "id": "p53",
     "name": "Fruteira de bancada",
     "category": "Decoração e detalhes",
     "priceCents": 8000,
-    "image": "/images/categoria-7.svg"
+    "image": "/images/categoria-7.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/25z9LHj"
+    }
   },
   {
     "id": "p54",
     "name": "Centro de mesa",
     "category": "Decoração e detalhes",
     "priceCents": 10000,
-    "image": "/images/categoria-7.svg"
+    "image": "/images/categoria-7.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1QsYJky"
+    }
   },
   {
     "id": "p55",
     "name": "Porta-retratos",
     "category": "Decoração e detalhes",
     "priceCents": 5000,
-    "image": "/images/categoria-7.svg"
+    "image": "/images/categoria-7.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2gzqYuw"
+    }
   },
   {
     "id": "p56",
     "name": "Jarra de vidro",
     "category": "Decoração e detalhes",
     "priceCents": 7000,
-    "image": "/images/categoria-7.svg"
+    "image": "/images/categoria-7.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2yuZXko"
+    }
   },
   {
     "id": "p57",
     "name": "Jogo de panelas",
     "category": "Panelas e cozinha",
     "priceCents": 50000,
-    "image": "/images/categoria-8.svg"
+    "image": "/images/categoria-8.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1Ae73b4"
+    }
   },
   {
     "id": "p58",
     "name": "Frigideira",
     "category": "Panelas e cozinha",
     "priceCents": 10000,
-    "image": "/images/categoria-8.svg"
+    "image": "/images/categoria-8.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2Fq58kk"
+    }
   },
   {
     "id": "p59",
     "name": "Panela de pressão",
     "category": "Panelas e cozinha",
     "priceCents": 18000,
-    "image": "/images/categoria-8.svg"
+    "image": "/images/categoria-8.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/19VS3V6"
+    }
   },
   {
     "id": "p60",
     "name": "Conjunto de facas",
     "category": "Panelas e cozinha",
     "priceCents": 12000,
-    "image": "/images/categoria-8.svg"
+    "image": "/images/categoria-8.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2MSkuz4"
+    }
   },
   {
     "id": "p61",
     "name": "Jogo de assadeiras",
     "category": "Panelas e cozinha",
     "priceCents": 13000,
-    "image": "/images/categoria-8.svg"
+    "image": "/images/categoria-8.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2Ep5Kxx"
+    }
   },
   {
     "id": "p62",
     "name": "Panela para cozinhar a vapor",
     "category": "Panelas e cozinha",
     "priceCents": 15000,
-    "image": "/images/categoria-8.svg"
+    "image": "/images/categoria-8.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1nG3FGu"
+    }
   },
   {
     "id": "p63",
     "name": "Faqueiro completo",
     "category": "Panelas e cozinha",
     "priceCents": 20000,
-    "image": "/images/categoria-8.svg"
+    "image": "/images/categoria-8.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1Vsp1Z8"
+    }
   },
   {
     "id": "p64",
     "name": "Aparelho de jantar especial",
     "category": "Panelas e cozinha",
     "priceCents": 45000,
-    "image": "/images/categoria-8.svg"
+    "image": "/images/categoria-8.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2HLZJwt"
+    }
   },
   {
     "id": "p65",
     "name": "Boleira com tampa",
     "category": "Para momentos gostosos",
     "priceCents": 12000,
-    "image": "/images/categoria-9.svg"
+    "image": "/images/categoria-9.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/13uKnCB"
+    }
   },
   {
     "id": "p66",
     "name": "Suporte para bolo",
     "category": "Para momentos gostosos",
     "priceCents": 9000,
-    "image": "/images/categoria-9.svg"
+    "image": "/images/categoria-9.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/143sw85k"
+    }
   },
   {
     "id": "p67",
     "name": "Garrafa térmica",
     "category": "Para momentos gostosos",
     "priceCents": 10000,
-    "image": "/images/categoria-9.svg"
+    "image": "/images/categoria-9.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1SHtoLQ"
+    }
   },
   {
     "id": "p68",
     "name": "Jarra para suco",
     "category": "Para momentos gostosos",
     "priceCents": 6000,
-    "image": "/images/categoria-9.svg"
+    "image": "/images/categoria-9.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1m6b7XS"
+    }
   },
   {
     "id": "p69",
     "name": "Kit para café",
     "category": "Para momentos gostosos",
     "priceCents": 14000,
-    "image": "/images/categoria-9.svg"
+    "image": "/images/categoria-9.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2qtWFkG"
+    }
   },
   {
     "id": "p70",
     "name": "Tábua para queijos e frios",
     "category": "Para momentos gostosos",
     "priceCents": 11000,
-    "image": "/images/categoria-9.svg"
+    "image": "/images/categoria-9.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1a9pmg3"
+    }
   },
   {
     "id": "p71",
     "name": "Conjunto para fondue",
     "category": "Para momentos gostosos",
     "priceCents": 18000,
-    "image": "/images/categoria-9.svg"
+    "image": "/images/categoria-9.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/1rFFM2n"
+    }
   },
   {
     "id": "p72",
     "name": "Petisqueiras para receber amigos",
     "category": "Para momentos gostosos",
     "priceCents": 10000,
-    "image": "/images/categoria-9.svg"
+    "image": "/images/categoria-9.svg",
+    "links": {
+        "mercadoLivre": "https://meli.la/2NyhBGE"
+    }
   }
 ]
