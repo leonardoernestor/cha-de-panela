@@ -6,14 +6,16 @@
   <meta name="description" content="Chá de panela de Gislaine e Leonardo. Conheça nossa lista de presentes e faça parte desse momento especial.">
   <meta name="theme-color" content="#626b46">
   <title>Gislaine & Leonardo | Chá de Panela</title>
-  <link rel="stylesheet" href="style.css?v=20261028b">
-  <script src="app.js?v=20261028b" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261117d">
+  <script src="app.js?v=20261117d" defer></script>
 </head>
 <body>
   <header class="topo">
     <nav class="container navegacao" aria-label="Menu principal">
       <a href="#inicio" class="marca">G & L</a>
       <div class="menu">
+        <a href="#local">Local</a>
+        <a href="#confirmar-presenca">Confirmar presença</a>
         <a href="#cores">Nossas cores</a>
         <a href="#presentes">Presentes</a>
         <a href="#nossa-historia">Nossa história</a>
@@ -27,8 +29,75 @@
         <h1>Gislaine <span>&</span> Leonardo</h1>
         <p>Nosso maior presente é a sua presença! Mas, se quiser nos ajudar a completar nosso lar, preparamos esta lista com muito carinho.</p>
         <div class="botoes-hero">
+          <a href="#local" class="botao">Ver local da festa</a>
+          <a href="#confirmar-presenca" class="botao botao-secundario">Confirmar presença</a>
           <a href="#presentes" class="botao">Conhecer a lista de presentes</a>
           <a href="#nossa-historia" class="botao botao-secundario">Nossa história</a>
+        </div>
+      </div>
+    </section>
+    <section class="secao" id="local">
+      <div class="container">
+        <div class="cabecalho-secao">
+          <h2>Como chegar</h2>
+          <p>Esperamos você no Residencial Maravilhas. Veja no mapa onde será a festa.</p>
+        </div>
+        <div class="local-mapa">
+          <h3>Residencial Maravilhas</h3>
+          <p>Rua Rio de Janeiro, 777 · São José da Lapa - MG</p>
+          <iframe
+            class="mapa"
+            title="Local da festa: Residencial Maravilhas, em São José da Lapa"
+            src="https://maps.google.com/maps?q=Rua%20Rio%20de%20Janeiro%2C%20777%2C%20Residencial%20Maravilhas%2C%20S%C3%A3o%20Jos%C3%A9%20da%20Lapa%2C%20MG%2C%20Brasil&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="botoes-mapa">
+            <a
+              class="botao"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Rio%20de%20Janeiro%2C%20777%2C%20Residencial%20Maravilhas%2C%20S%C3%A3o%20Jos%C3%A9%20da%20Lapa%2C%20MG%2C%20Brasil"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Abrir no Google Maps</a>
+            <a
+              class="botao botao-secundario"
+              href="https://waze.com/ul?q=Rua%20Rio%20de%20Janeiro%2C%20777%2C%20Residencial%20Maravilhas%2C%20S%C3%A3o%20Jos%C3%A9%20da%20Lapa%2C%20MG%2C%20Brasil&amp;navigate=yes"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Abrir no Waze</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="secao secao-presenca" id="confirmar-presenca">
+      <div class="container">
+        <div class="mensagem">
+          <h2>Você vai comemorar com a gente?</h2>
+          <p>Confirme sua presença para nos ajudar a preparar esse dia especial.</p>
+          <form class="form-presenca" id="form-presenca" method="post" target="_blank">
+            <input type="hidden" name="action" value="rsvp">
+            <div>
+              <label for="nome-presenca">Seu nome</label>
+              <input id="nome-presenca" name="name" type="text" maxlength="120" autocomplete="name" required>
+            </div>
+            <div>
+              <label for="quantidade-presenca">Número de pessoas (incluindo você)</label>
+              <select id="quantidade-presenca" name="guests" required>
+                <option value="1">1 pessoa</option>
+                <option value="2">2 pessoas</option>
+                <option value="3">3 pessoas</option>
+                <option value="4">4 pessoas</option>
+                <option value="5">5 pessoas</option>
+                <option value="6">6 pessoas</option>
+                <option value="7">7 pessoas</option>
+                <option value="8">8 pessoas</option>
+                <option value="9">9 pessoas</option>
+                <option value="10">10 pessoas</option>
+              </select>
+            </div>
+            <button class="botao" type="submit">Confirmar presença</button>
+          </form>
+          <p class="texto-suave">Após enviar, uma página de confirmação será aberta.</p>
         </div>
       </div>
     </section>
