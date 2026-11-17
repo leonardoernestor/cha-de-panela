@@ -1,6 +1,7 @@
-const SPREADSHEET_ID = 'COLE_AQUI_O_ID_DA_PLANILHA';
+const SPREADSHEET_ID = '1TXTYk0WnoV5vYqmex788L9IZhPSGhcsz9YZG9mTnSDs';
 const SHEET_NAME = 'Presentes comprados';
-const SITE_URL = 'https://leonardoernestor.github.io/Chadepanela/';
+const RSVP_SHEET_NAME = 'Confirmações de presença';
+const SITE_URL = 'https://leonardoernestor.github.io/cha-de-panela/';
 const MARKETPLACES = {
  mercadoLivre: 'Mercado Livre',
  shopee: 'Shopee'
@@ -8,12 +9,8 @@ const MARKETPLACES = {
 
 function setup() {
  const spreadsheet = openSpreadsheet_();
- let sheet = spreadsheet.getSheetByName(SHEET_NAME);
- if (!sheet) sheet = spreadsheet.insertSheet(SHEET_NAME);
- if (sheet.getLastRow() === 0) {
-  sheet.appendRow(['ID do presente', 'Nome do presente', 'Loja', 'Confirmado em']);
-  sheet.setFrozenRows(1);
- }
+ setupSheet_(spreadsheet, SHEET_NAME, ['ID do presente', 'Nome do presente', 'Loja', 'Confirmado em']);
+ setupSheet_(spreadsheet, RSVP_SHEET_NAME, ['Nome', 'Número de pessoas', 'Confirmado em']);
 }
 
 function doGet(event) {
@@ -25,6 +22,7 @@ function doGet(event) {
 
 function doPost(event) {
  const params = event && event.parameter ? event.parameter : {};
+ if (params.action === 'rsvp') return saveRsvp_(params);
  if (params.action !== 'confirm') return htmlPage_('Não foi possível confirmar', 'A solicitação está incompleta.');
 
  const id = String(params.id || '');
@@ -49,6 +47,31 @@ function doPost(event) {
   }
   sheet.appendRow([id, name, MARKETPLACES[marketplace], new Date()]);
   return htmlPage_('Compra confirmada', 'Obrigado! Este presente agora aparece como comprado para todos. Volte à lista do chá de panela.', true);
+ } finally {
+  lock.releaseLock();
+ }
+}
+
+function saveRsvp_(params) {
+ const name = cleanText_(params.name, 120);
+ const guests = Number(params.guests);
+ if (!name || !Number.isInteger(guests) || guests < 1 || guests > 10) {
+  return htmlPage_('Não foi possível confirmar', 'Confira seu nome e o número de pessoas e tente novamente.', true, params.returnUrl);
+ }
+
+ const lock = LockService.getScriptLock();
+ if (!lock.tryLock(10000)) {
+  return htmlPage_('Tente novamente', 'As confirmações estão sendo atualizadas. Aguarde alguns segundos e tente de novo.', true, params.returnUrl);
+ }
+ try {
+  const sheet = getRsvpSheet_();
+  sheet.appendRow([name, guests, new Date()]);
+  return htmlPage_(
+   'Presença confirmada!',
+   `Obrigado, <strong>${escapeHtml_(name)}</strong>! Registramos a presença de ${guests} ${guests === 1 ? 'pessoa' : 'pessoas'}.`,
+   true,
+   params.returnUrl
+  );
  } finally {
   lock.releaseLock();
  }
@@ -108,6 +131,23 @@ function getClaimsSheet_() {
  return sheet;
 }
 
+function getRsvpSheet_() {
+ const sheet = openSpreadsheet_().getSheetByName(RSVP_SHEET_NAME);
+ if (!sheet || sheet.getLastRow() === 0) {
+  throw new Error('A aba de confirmações não foi inicializada. Execute setup() no editor do Apps Script.');
+ }
+ return sheet;
+}
+
+function setupSheet_(spreadsheet, name, headers) {
+ let sheet = spreadsheet.getSheetByName(name);
+ if (!sheet) sheet = spreadsheet.insertSheet(name);
+ if (sheet.getLastRow() === 0) {
+  sheet.appendRow(headers);
+  sheet.setFrozenRows(1);
+ }
+}
+
 function openSpreadsheet_() {
  if (!SPREADSHEET_ID || SPREADSHEET_ID === 'COLE_AQUI_O_ID_DA_PLANILHA') {
   throw new Error('Configure o ID da sua planilha na constante SPREADSHEET_ID.');
@@ -129,12 +169,28 @@ function escapeHtml_(value) {
  })[character]);
 }
 
-function htmlPage_(title, body, showSiteLink) {
- const siteLink = showSiteLink ? `<p><a href="${SITE_URL}" target="_top">Voltar para a lista de presentes</a></p>` : '';
+function htmlPage_(title, body, showSiteLink, returnUrl) {
+ const returnHref = safeReturnUrl_(returnUrl) || (showSiteLink ? SITE_URL : '');
+ const siteLink = returnHref ? `<p><a href="${escapeHtml_(returnHref)}" target="_top">Voltar para o site</a></p>` : '';
  const html = `<!doctype html><html lang="pt-BR"><meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml_(title)}</title>
   <style>body{font:16px/1.6 Arial,sans-serif;max-width:620px;margin:12vh auto;padding:24px;color:#433b33;background:#faf7f2}h1{font:normal 2rem Georgia,serif;color:#624737}form{padding:24px;background:white;border-radius:18px}label,select{display:block;width:100%;margin:12px 0;padding:10px}button{padding:12px 20px;border:0;border-radius:10px;background:#626b46;color:white;font:inherit;cursor:pointer}a{color:#626b46}</style>
   <h1>${escapeHtml_(title)}</h1>${body}${siteLink}</html>`;
  return HtmlService.createHtmlOutput(html).setTitle(title);
+}
+
+function safeReturnUrl_(value) {
+ try {
+  const url = new URL(String(value || ''));
+  const allowedOrigins = [
+   new URL(SITE_URL).origin,
+   'http://127.0.0.1:5500',
+   'http://localhost:5500',
+   'http://localhost:3000'
+  ];
+  return allowedOrigins.includes(url.origin) ? url.href : '';
+ } catch {
+  return '';
+ }
 }
