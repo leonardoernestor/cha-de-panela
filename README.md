@@ -23,13 +23,9 @@ Depois disso, os convidados podem abrir a loja, concluir a compra e usar **Já c
 
 As confirmações são declarações dos convidados: o Mercado Livre e a Shopee não informam ao site se houve pagamento. O Apps Script precisa ficar acessível a qualquer pessoa para os convidados confirmarem; não coloque senhas, tokens privados ou dados sensíveis no código público.
 
-## Local da festa e confirmação de presença
+## Local da festa
 
-A página inicial inclui um mapa incorporado e fixo do Residencial Maravilhas, na Rua Rio de Janeiro, 777, em São José da Lapa - MG. O mapa mostra o local da festa sem calcular rotas no site. O botão **Confirmar presença** envia o nome e a quantidade de pessoas para a aba **Confirmações de presença** da mesma planilha.
-
-Para ativar a confirmação, copie a versão atualizada de `apps-script/Code.gs` para o projeto Apps Script vinculado à planilha, salve e execute `setup()` para criar a aba. Em seguida, atualize a implantação do app da Web em **Implantar → Gerenciar implantações → Editar → Nova versão → Implantar**. O endereço `/exec` configurado em `app.js` deve ser o da implantação atualizada. Sem atualizar essa implantação, a página pode abrir, mas a presença não será gravada.
-
-Ao testar pelo Live Server no endereço padrão `http://127.0.0.1:5500`, a confirmação retorna ao site local. No site publicado, retorna ao endereço do GitHub Pages. Se usar outra porta local, ajuste a lista `allowedOrigins` na função `safeReturnUrl_` em `apps-script/Code.gs` antes de atualizar a implantação.
+A página inicial inclui um mapa incorporado e fixo do Residencial Maravilhas, na Rua Rio de Janeiro, 777, em São José da Lapa - MG, além de botões para abrir o endereço no Google Maps e no Waze.
 
 ## Produtos, links e imagens
 

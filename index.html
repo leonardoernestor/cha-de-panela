@@ -6,8 +6,8 @@
   <meta name="description" content="Chá de panela de Gislaine e Leonardo. Conheça nossa lista de presentes e faça parte desse momento especial.">
   <meta name="theme-color" content="#626b46">
   <title>Gislaine & Leonardo | Chá de Panela</title>
-  <link rel="stylesheet" href="style.css?v=20261117d">
-  <script src="app.js?v=20261117d" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261117e">
+  <script src="app.js?v=20261117e" defer></script>
 </head>
 <body>
   <header class="topo">
@@ -15,7 +15,6 @@
       <a href="#inicio" class="marca">G & L</a>
       <div class="menu">
         <a href="#local">Local</a>
-        <a href="#confirmar-presenca">Confirmar presença</a>
         <a href="#cores">Nossas cores</a>
         <a href="#presentes">Presentes</a>
         <a href="#nossa-historia">Nossa história</a>
@@ -30,7 +29,6 @@
         <p>Nosso maior presente é a sua presença! Mas, se quiser nos ajudar a completar nosso lar, preparamos esta lista com muito carinho.</p>
         <div class="botoes-hero">
           <a href="#local" class="botao">Ver local da festa</a>
-          <a href="#confirmar-presenca" class="botao botao-secundario">Confirmar presença</a>
           <a href="#presentes" class="botao">Conhecer a lista de presentes</a>
           <a href="#nossa-historia" class="botao botao-secundario">Nossa história</a>
         </div>
@@ -66,39 +64,6 @@
               rel="noopener noreferrer"
             >Abrir no Waze</a>
           </div>
-        </div>
-      </div>
-    </section>
-    <section class="secao secao-presenca" id="confirmar-presenca">
-      <div class="container">
-        <div class="mensagem">
-          <h2>Você vai comemorar com a gente?</h2>
-          <p>Confirme sua presença para nos ajudar a preparar esse dia especial.</p>
-          <form class="form-presenca" id="form-presenca" method="post" target="_blank">
-            <input type="hidden" name="action" value="rsvp">
-            <input type="hidden" id="url-retorno-presenca" name="returnUrl" value="">
-            <div>
-              <label for="nome-presenca">Seu nome</label>
-              <input id="nome-presenca" name="name" type="text" maxlength="120" autocomplete="name" required>
-            </div>
-            <div>
-              <label for="quantidade-presenca">Número de pessoas (incluindo você)</label>
-              <select id="quantidade-presenca" name="guests" required>
-                <option value="1">1 pessoa</option>
-                <option value="2">2 pessoas</option>
-                <option value="3">3 pessoas</option>
-                <option value="4">4 pessoas</option>
-                <option value="5">5 pessoas</option>
-                <option value="6">6 pessoas</option>
-                <option value="7">7 pessoas</option>
-                <option value="8">8 pessoas</option>
-                <option value="9">9 pessoas</option>
-                <option value="10">10 pessoas</option>
-              </select>
-            </div>
-            <button class="botao" type="submit">Confirmar presença</button>
-          </form>
-          <p class="texto-suave">Após enviar, uma página de confirmação será aberta.</p>
         </div>
       </div>
     </section>

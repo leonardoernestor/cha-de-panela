@@ -279,8 +279,6 @@ async function initialize() {
 
 $('busca').addEventListener('input', render);
 $('filtroCategoria').addEventListener('change', render);
-$('form-presenca').action = APPS_SCRIPT_URL;
-$('url-retorno-presenca').value = window.location.href;
 window.addEventListener('focus', () => {
  if (APPS_SCRIPT_URL) refreshClaims().catch(error => {
   claimsError = true;
